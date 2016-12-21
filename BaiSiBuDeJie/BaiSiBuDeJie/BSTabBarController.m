@@ -11,6 +11,7 @@
 #import "BSNewViewController.h"
 #import "BSEssenceViewController.h"
 #import "BSFriendTrendsViewController.h"
+#import "BSTabBar.h"
 
 @interface BSTabBarController ()
 
@@ -37,14 +38,19 @@
      [self setUpChildVC:friendTrendsVC title:@"关注" image: @"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
      [self setUpChildVC:meVC title:@"我" image: @"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
     
+    // 设置自定义TabBar
+    BSTabBar *tabBar = [[BSTabBar alloc] initWithFrame:self.tabBar.frame];
+    [self setValue:tabBar forKey:@"tabBar"];
 }
 
 - (void)setUpChildVC:(UIViewController *)vc title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage
 {
+    // 设置文字及图片
     vc.tabBarItem.title = title;
     vc.tabBarItem.image = [UIImage imageNamed:image];
     vc.tabBarItem.selectedImage = [UIImage imageNamed:selectedImage];
     
+    // 添加子控制器
     [self addChildViewController:vc];
 }
 
