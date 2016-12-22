@@ -13,6 +13,7 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
 #import "UIView+BSFrameExtension.h"
+#import "UIBarButtonItem+BSBarButtonItemExtension.h"
 
 // 调试阶段显示日志，发布后不显示
 #ifndef __OPTIMIZE__
@@ -21,6 +22,11 @@
 #define NSLog(...) {}
 #endif
 
+// 输出方法名
 #define LogFunc NSLog(@"%s", __func__)
+
+#define GCXColor(r, g, b) [UIColor colorWithRed:r green:g blue:b alpha:1.0]
+// 全局背景颜色
+#define BSGlobleBackgroundColor GCXColor(0.92, 0.92, 0.92)
 
 #endif /* PrefixHeader_pch */

@@ -41,6 +41,8 @@
     // 设置自定义TabBar
     BSTabBar *tabBar = [[BSTabBar alloc] initWithFrame:self.tabBar.frame];
     [self setValue:tabBar forKey:@"tabBar"];
+    
+    tabBar.backgroundImage = [UIImage imageNamed:@"tabbar-light"];
 }
 
 - (void)setUpChildVC:(UIViewController *)vc title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage
@@ -52,6 +54,7 @@
     
     // 用导航控制器封装控制器，将导航控制器添加为子控件
     UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:vc];
+    [navigationVC.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
     [self addChildViewController:navigationVC];
 }
 

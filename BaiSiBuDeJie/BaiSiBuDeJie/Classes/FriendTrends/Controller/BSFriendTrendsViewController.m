@@ -17,8 +17,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
     // 设置导航栏
     [self setUpNavigationBar];
+    
+    // 设置view的背景颜色
+    self.view.backgroundColor = BSGlobleBackgroundColor;
 }
 
 - (void)setUpNavigationBar
@@ -27,15 +31,7 @@
     self.navigationItem.title = @"我的关注";
     
     // 设置导航栏左边按钮
-    UIButton *friendsButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [friendsButton setBackgroundImage:[UIImage imageNamed:@"friendsRecommentIcon"] forState:UIControlStateNormal];
-    [friendsButton setBackgroundImage:[UIImage imageNamed:@"friendsRecommentIcon-click"] forState:UIControlStateHighlighted];
-    friendsButton.size = friendsButton.currentBackgroundImage.size;
-    
-    // 给按钮添加点击事件
-    [friendsButton addTarget:self action:@selector(friendsClick) forControlEvents:UIControlEventTouchUpInside];
-    
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:friendsButton];
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage: @"friendsRecommentIcon" highlightedImage: @"friendsRecommentIcon-click" target: self action: @selector(friendsClick)];
     
 }
 
