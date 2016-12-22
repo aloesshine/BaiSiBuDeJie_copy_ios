@@ -31,9 +31,9 @@
     {
         // 创建发布按钮并将其添加到导航栏
         UIButton *publishBtn = [[UIButton alloc] init];
-        [publishBtn setImage:[UIImage imageNamed:@"tabBar_publish_icon"] forState:UIControlStateNormal];
-        [publishBtn setImage:[UIImage imageNamed:@" tabBar_publish_click_icon"] forState:UIControlStateHighlighted];
-        publishBtn.bounds = CGRectMake(0, 0, publishBtn.currentImage.size.width, publishBtn.currentImage.size.height);
+        [publishBtn setBackgroundImage:[UIImage imageNamed:@"tabBar_publish_icon"] forState:UIControlStateNormal];
+        [publishBtn setBackgroundImage:[UIImage imageNamed:@" tabBar_publish_click_icon"] forState:UIControlStateHighlighted];
+        publishBtn.size = publishBtn.currentBackgroundImage.size;
         [self addSubview: publishBtn];
         
         self.publishButton = publishBtn;
@@ -48,12 +48,12 @@
     [super layoutSubviews];
     
     // 设置发布按钮的位置
-    self.publishButton.center = CGPointMake(self.bounds.size.width * 0.5, self.bounds.size.height * 0.5);
+    self.publishButton.center = CGPointMake(self.width * 0.5, self.height * 0.5);
     
     // 重新布局item
     CGFloat buttonY = 0;
-    CGFloat buttonH = self.bounds.size.height;
-    CGFloat buttonW = self.bounds.size.width / 5.0;
+    CGFloat buttonH = self.height;
+    CGFloat buttonW = self.width / 5.0;
     NSInteger index = 0;
     for (UIView *button in self.subviews)
     {
