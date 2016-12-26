@@ -10,6 +10,9 @@
 		7A2A0A921E0E4F5600050D08 /* BSFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A2A0A911E0E4F5600050D08 /* BSFriendTrendsViewController.xib */; };
 		7A2A0A961E0E57B500050D08 /* BSAttentionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A0A941E0E57B500050D08 /* BSAttentionController.m */; };
 		7A2A0A971E0E57B500050D08 /* BSAttentionController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A2A0A951E0E57B500050D08 /* BSAttentionController.xib */; };
+		7A6920CB1E114140000F5BE8 /* BSAttentionCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6920C91E114140000F5BE8 /* BSAttentionCategoryCell.m */; };
+		7A6920CC1E114140000F5BE8 /* BSAttentionCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A6920CA1E114140000F5BE8 /* BSAttentionCategoryCell.xib */; };
+		7A6920CF1E11444F000F5BE8 /* BSAttentionCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6920CE1E11444F000F5BE8 /* BSAttentionCategory.m */; };
 		7AF85D831E0A5EE80079C4EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AF85D821E0A5EE80079C4EE /* Assets.xcassets */; };
 		7AF85D911E0A5EE80079C4EE /* BaiSiBuDeJieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF85D901E0A5EE80079C4EE /* BaiSiBuDeJieTests.m */; };
 		7AF85D9C1E0A5EE80079C4EE /* BaiSiBuDeJieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF85D9B1E0A5EE80079C4EE /* BaiSiBuDeJieUITests.m */; };
@@ -52,6 +55,11 @@
 		7A2A0A931E0E57B500050D08 /* BSAttentionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSAttentionController.h; sourceTree = "<group>"; };
 		7A2A0A941E0E57B500050D08 /* BSAttentionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSAttentionController.m; sourceTree = "<group>"; };
 		7A2A0A951E0E57B500050D08 /* BSAttentionController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSAttentionController.xib; sourceTree = "<group>"; };
+		7A6920C81E114140000F5BE8 /* BSAttentionCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSAttentionCategoryCell.h; sourceTree = "<group>"; };
+		7A6920C91E114140000F5BE8 /* BSAttentionCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSAttentionCategoryCell.m; sourceTree = "<group>"; };
+		7A6920CA1E114140000F5BE8 /* BSAttentionCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSAttentionCategoryCell.xib; sourceTree = "<group>"; };
+		7A6920CD1E11444F000F5BE8 /* BSAttentionCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSAttentionCategory.h; sourceTree = "<group>"; };
+		7A6920CE1E11444F000F5BE8 /* BSAttentionCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSAttentionCategory.m; sourceTree = "<group>"; };
 		7AF85D731E0A5EE80079C4EE /* BaiSiBuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiSiBuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AF85D821E0A5EE80079C4EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7AF85D8C1E0A5EE80079C4EE /* BaiSiBuDeJieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaiSiBuDeJieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -258,6 +266,8 @@
 		7AF85DCD1E0BF28E0079C4EE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7A6920CD1E11444F000F5BE8 /* BSAttentionCategory.h */,
+				7A6920CE1E11444F000F5BE8 /* BSAttentionCategory.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -265,6 +275,9 @@
 		7AF85DCE1E0BF28E0079C4EE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7A6920C81E114140000F5BE8 /* BSAttentionCategoryCell.h */,
+				7A6920C91E114140000F5BE8 /* BSAttentionCategoryCell.m */,
+				7A6920CA1E114140000F5BE8 /* BSAttentionCategoryCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -502,6 +515,7 @@
 				7A2A0A971E0E57B500050D08 /* BSAttentionController.xib in Resources */,
 				7AF85DF91E0BF39F0079C4EE /* Info.plist in Resources */,
 				7AF85D831E0A5EE80079C4EE /* Assets.xcassets in Resources */,
+				7A6920CC1E114140000F5BE8 /* BSAttentionCategoryCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,7 +599,9 @@
 				7AF85DF11E0BF28E0079C4EE /* AppDelegate.m in Sources */,
 				7AF85DF61E0BF28E0079C4EE /* main.m in Sources */,
 				7AF85DF71E0BF28E0079C4EE /* BSTabBar.m in Sources */,
+				7A6920CB1E114140000F5BE8 /* BSAttentionCategoryCell.m in Sources */,
 				7AF85DF31E0BF28E0079C4EE /* UIView+BSFrameExtension.m in Sources */,
+				7A6920CF1E11444F000F5BE8 /* BSAttentionCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

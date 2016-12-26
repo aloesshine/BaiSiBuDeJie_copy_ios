@@ -8,8 +8,6 @@
 
 #import "BSFriendTrendsViewController.h"
 #import "BSAttentionController.h"
-#import "AFNetworking.h"
-#import "SVProgressHUD.h"
 
 @interface BSFriendTrendsViewController ()
 
@@ -44,22 +42,6 @@
     
     [self.navigationController showViewController:attentionVC sender:nil];
     
-    // 显示蒙版
-    [SVProgressHUD showProgress:SVProgressHUDMaskTypeBlack];
-    // 发送请求
-    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-    parameters[@"a"] = @"category";
-    parameters[@"c"] = @"subscribe";
-    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
-        
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"%@",responseObject);
-        [SVProgressHUD dismiss];
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"%@",error);
-        [SVProgressHUD showErrorWithStatus:@"failure"];
-    }];
 }
 
 
