@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A2A0A921E0E4F5600050D08 /* BSFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A2A0A911E0E4F5600050D08 /* BSFriendTrendsViewController.xib */; };
+		7A2A0A961E0E57B500050D08 /* BSAttentionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A0A941E0E57B500050D08 /* BSAttentionController.m */; };
+		7A2A0A971E0E57B500050D08 /* BSAttentionController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A2A0A951E0E57B500050D08 /* BSAttentionController.xib */; };
 		7AF85D831E0A5EE80079C4EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AF85D821E0A5EE80079C4EE /* Assets.xcassets */; };
 		7AF85D911E0A5EE80079C4EE /* BaiSiBuDeJieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF85D901E0A5EE80079C4EE /* BaiSiBuDeJieTests.m */; };
 		7AF85D9C1E0A5EE80079C4EE /* BaiSiBuDeJieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF85D9B1E0A5EE80079C4EE /* BaiSiBuDeJieUITests.m */; };
@@ -21,6 +24,8 @@
 		7AF85DF61E0BF28E0079C4EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF85DE71E0BF28E0079C4EE /* main.m */; };
 		7AF85DF71E0BF28E0079C4EE /* BSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF85DEC1E0BF28E0079C4EE /* BSTabBar.m */; };
 		7AF85DF91E0BF39F0079C4EE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7AF85DF81E0BF39F0079C4EE /* Info.plist */; };
+		7AF85DFC1E0D140E0079C4EE /* BSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF85DFB1E0D140E0079C4EE /* BSNavigationController.m */; };
+		F0265E05075C460052B72A22 /* libPods-BaiSiBuDeJie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E55E0584E7E1A7FDC4924844 /* libPods-BaiSiBuDeJie.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +46,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A527B828F67074C70952265 /* Pods-BaiSiBuDeJie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaiSiBuDeJie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaiSiBuDeJie/Pods-BaiSiBuDeJie.debug.xcconfig"; sourceTree = "<group>"; };
+		58293E90F467201E5CE20F7B /* Pods-BaiSiBuDeJie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaiSiBuDeJie.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaiSiBuDeJie/Pods-BaiSiBuDeJie.release.xcconfig"; sourceTree = "<group>"; };
+		7A2A0A911E0E4F5600050D08 /* BSFriendTrendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSFriendTrendsViewController.xib; sourceTree = "<group>"; };
+		7A2A0A931E0E57B500050D08 /* BSAttentionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSAttentionController.h; sourceTree = "<group>"; };
+		7A2A0A941E0E57B500050D08 /* BSAttentionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSAttentionController.m; sourceTree = "<group>"; };
+		7A2A0A951E0E57B500050D08 /* BSAttentionController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSAttentionController.xib; sourceTree = "<group>"; };
 		7AF85D731E0A5EE80079C4EE /* BaiSiBuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiSiBuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AF85D821E0A5EE80079C4EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7AF85D8C1E0A5EE80079C4EE /* BaiSiBuDeJieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaiSiBuDeJieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +81,9 @@
 		7AF85DEB1E0BF28E0079C4EE /* BSTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTabBar.h; sourceTree = "<group>"; };
 		7AF85DEC1E0BF28E0079C4EE /* BSTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTabBar.m; sourceTree = "<group>"; };
 		7AF85DF81E0BF39F0079C4EE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7AF85DFA1E0D140E0079C4EE /* BSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSNavigationController.h; sourceTree = "<group>"; };
+		7AF85DFB1E0D140E0079C4EE /* BSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSNavigationController.m; sourceTree = "<group>"; };
+		E55E0584E7E1A7FDC4924844 /* libPods-BaiSiBuDeJie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaiSiBuDeJie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0265E05075C460052B72A22 /* libPods-BaiSiBuDeJie.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +112,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21027EDF6CF54EB89DFF943B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2A527B828F67074C70952265 /* Pods-BaiSiBuDeJie.debug.xcconfig */,
+				58293E90F467201E5CE20F7B /* Pods-BaiSiBuDeJie.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4E64E0EB47AEB6E4EBE8A843 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E55E0584E7E1A7FDC4924844 /* libPods-BaiSiBuDeJie.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7AF85D6A1E0A5EE80079C4EE = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +136,8 @@
 				7AF85D8F1E0A5EE80079C4EE /* BaiSiBuDeJieTests */,
 				7AF85D9A1E0A5EE80079C4EE /* BaiSiBuDeJieUITests */,
 				7AF85D741E0A5EE80079C4EE /* Products */,
+				21027EDF6CF54EB89DFF943B /* Pods */,
+				4E64E0EB47AEB6E4EBE8A843 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -213,6 +247,10 @@
 			children = (
 				7AF85DCB1E0BF28E0079C4EE /* BSFriendTrendsViewController.h */,
 				7AF85DCC1E0BF28E0079C4EE /* BSFriendTrendsViewController.m */,
+				7A2A0A911E0E4F5600050D08 /* BSFriendTrendsViewController.xib */,
+				7A2A0A931E0E57B500050D08 /* BSAttentionController.h */,
+				7A2A0A941E0E57B500050D08 /* BSAttentionController.m */,
+				7A2A0A951E0E57B500050D08 /* BSAttentionController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -328,6 +366,8 @@
 			children = (
 				7AF85DE41E0BF28E0079C4EE /* BSTabBarController.h */,
 				7AF85DE51E0BF28E0079C4EE /* BSTabBarController.m */,
+				7AF85DFA1E0D140E0079C4EE /* BSNavigationController.h */,
+				7AF85DFB1E0D140E0079C4EE /* BSNavigationController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -355,9 +395,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7AF85DA01E0A5EE80079C4EE /* Build configuration list for PBXNativeTarget "BaiSiBuDeJie" */;
 			buildPhases = (
+				6E2EB4C2747A18E5F498DEC4 /* [CP] Check Pods Manifest.lock */,
 				7AF85D6F1E0A5EE80079C4EE /* Sources */,
 				7AF85D701E0A5EE80079C4EE /* Frameworks */,
 				7AF85D711E0A5EE80079C4EE /* Resources */,
+				A3714451E7D9E61665E91207 /* [CP] Embed Pods Frameworks */,
+				21E37DA72FF7EC9BA76EBC53 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -455,6 +498,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A2A0A921E0E4F5600050D08 /* BSFriendTrendsViewController.xib in Resources */,
+				7A2A0A971E0E57B500050D08 /* BSAttentionController.xib in Resources */,
 				7AF85DF91E0BF39F0079C4EE /* Info.plist in Resources */,
 				7AF85D831E0A5EE80079C4EE /* Assets.xcassets in Resources */,
 			);
@@ -476,6 +521,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		21E37DA72FF7EC9BA76EBC53 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BaiSiBuDeJie/Pods-BaiSiBuDeJie-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E2EB4C2747A18E5F498DEC4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A3714451E7D9E61665E91207 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BaiSiBuDeJie/Pods-BaiSiBuDeJie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7AF85D6F1E0A5EE80079C4EE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -483,8 +576,10 @@
 			files = (
 				7AF85DED1E0BF28E0079C4EE /* BSEssenceViewController.m in Sources */,
 				7AF85DEE1E0BF28E0079C4EE /* BSFriendTrendsViewController.m in Sources */,
+				7AF85DFC1E0D140E0079C4EE /* BSNavigationController.m in Sources */,
 				7AF85DF21E0BF28E0079C4EE /* UIBarButtonItem+BSBarButtonItemExtension.m in Sources */,
 				7AF85DF01E0BF28E0079C4EE /* BSNewViewController.m in Sources */,
+				7A2A0A961E0E57B500050D08 /* BSAttentionController.m in Sources */,
 				7AF85DF41E0BF28E0079C4EE /* BSTabBarController.m in Sources */,
 				7AF85DEF1E0BF28E0079C4EE /* BSMeViewController.m in Sources */,
 				7AF85DF11E0BF28E0079C4EE /* AppDelegate.m in Sources */,
@@ -616,6 +711,7 @@
 		};
 		7AF85DA11E0A5EE80079C4EE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A527B828F67074C70952265 /* Pods-BaiSiBuDeJie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -629,6 +725,7 @@
 		};
 		7AF85DA21E0A5EE80079C4EE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58293E90F467201E5CE20F7B /* Pods-BaiSiBuDeJie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -705,6 +802,7 @@
 				7AF85DA21E0A5EE80079C4EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7AF85DA31E0A5EE80079C4EE /* Build configuration list for PBXNativeTarget "BaiSiBuDeJieTests" */ = {
 			isa = XCConfigurationList;
@@ -713,6 +811,7 @@
 				7AF85DA51E0A5EE80079C4EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7AF85DA61E0A5EE80079C4EE /* Build configuration list for PBXNativeTarget "BaiSiBuDeJieUITests" */ = {
 			isa = XCConfigurationList;
@@ -721,6 +820,7 @@
 				7AF85DA81E0A5EE80079C4EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

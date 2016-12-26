@@ -12,6 +12,7 @@
 #import "BSEssenceViewController.h"
 #import "BSFriendTrendsViewController.h"
 #import "BSTabBar.h"
+#import "BSNavigationController.h"
 
 @interface BSTabBarController ()
 
@@ -19,13 +20,16 @@
 
 @implementation BSTabBarController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
++(void)initialize
+{
     // 通过appearance统一设置所有TabBarItem字体等属性
     // UI_APPEARANCE_SELECTOR 带有这个宏才可以通过appearance统一设置
     [self setTabBarItemAttributes];
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
     
     // 初始化子控制器
     BSMeViewController *meVC = [[BSMeViewController alloc] init];
@@ -53,12 +57,11 @@
     vc.tabBarItem.selectedImage = [UIImage imageNamed:selectedImage];
     
     // 用导航控制器封装控制器，将导航控制器添加为子控件
-    UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:vc];
-    [navigationVC.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
+    BSNavigationController *navigationVC = [[BSNavigationController alloc] initWithRootViewController:vc];
     [self addChildViewController:navigationVC];
 }
 
-- (void)setTabBarItemAttributes
++ (void)setTabBarItemAttributes
 {
     UITabBarItem *iterm = [UITabBarItem appearance];
     NSMutableDictionary *attr = [NSMutableDictionary dictionary];
