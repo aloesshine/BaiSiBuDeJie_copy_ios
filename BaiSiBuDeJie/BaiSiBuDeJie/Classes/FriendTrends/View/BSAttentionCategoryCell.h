@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface BSAttentionCategoryCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIView *leftView;
 
 @end

@@ -10,4 +10,19 @@
 
 @implementation BSAttentionCategory
 
+- (instancetype)initWithDict:(NSDictionary *)dict
+{
+//    NSLog(@"%@-----%@----%@---",dict[@"name"],dict[@"id"], dict[@"count"]);
+    BSAttentionCategory *att = [[BSAttentionCategory alloc] init];
+    att.name = dict[@"name"];
+    att.ID = [dict[@"id"] integerValue];
+    att.count = [dict[@"count"] integerValue];
+    return att;
+}
+
++(instancetype)attentionCategoryWithDict:(NSDictionary *)dict
+{
+    return [[BSAttentionCategory alloc] initWithDict:dict];
+}
+
 @end

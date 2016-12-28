@@ -14,4 +14,7 @@
 @property(nonatomic, assign) NSInteger count; // 每个分类下拥有的用户数量
 @property(nonatomic, copy) NSString *name;
 
++ (instancetype)attentionCategoryWithDict:(NSDictionary *)dict;
+- (instancetype)initWithDict:(NSDictionary *)dict;
+
 @end

@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BSAttentionController">
             <connections>
                 <outlet property="categoryTableView" destination="ytH-hT-Nh3" id="Ddi-gl-3ia"/>
+                <outlet property="userTableView" destination="BbT-rG-jhg" id="co1-sc-MTQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,7 +21,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ytH-hT-Nh3">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ytH-hT-Nh3">
                     <rect key="frame" x="0.0" y="0.0" width="70" height="667"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -32,10 +33,18 @@
                         <outlet property="delegate" destination="-1" id="6LY-DZ-c2i"/>
                     </connections>
                 </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BbT-rG-jhg">
+                    <rect key="frame" x="70" y="0.0" width="305" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="BbT-rG-jhg" secondAttribute="bottom" id="HbH-kc-37H"/>
                 <constraint firstAttribute="bottom" secondItem="ytH-hT-Nh3" secondAttribute="bottom" id="Rmd-Hx-mMa"/>
+                <constraint firstAttribute="trailing" secondItem="BbT-rG-jhg" secondAttribute="trailing" id="SbU-n4-Slk"/>
+                <constraint firstItem="BbT-rG-jhg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Wdj-6J-1kz"/>
+                <constraint firstItem="BbT-rG-jhg" firstAttribute="leading" secondItem="ytH-hT-Nh3" secondAttribute="trailing" id="c4g-f4-dep"/>
                 <constraint firstItem="ytH-hT-Nh3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="oK0-qM-goG"/>
                 <constraint firstItem="ytH-hT-Nh3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="wSv-iG-kkd"/>
             </constraints>
