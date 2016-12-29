@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="userCell" rowHeight="79" id="KGk-i7-Jjw" customClass="BSAttentionUserCell">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="userCell" rowHeight="79" id="KGk-i7-Jjw" customClass="BSAttentionUserCell">
             <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -52,18 +52,33 @@
                             <color key="titleColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
                     </button>
+                    <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4i1-7G-JdH">
+                        <rect key="frame" x="0.0" y="77" width="320" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="bhT-6o-PNY"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="ufg-7e-ZMR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="3wF-ZB-ze7"/>
+                    <constraint firstItem="4i1-7G-JdH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="8Zz-ds-zqa"/>
                     <constraint firstItem="Jhy-bJ-jZB" firstAttribute="bottom" secondItem="ufg-7e-ZMR" secondAttribute="bottom" id="9v5-hC-DmX"/>
+                    <constraint firstAttribute="trailing" secondItem="4i1-7G-JdH" secondAttribute="trailing" id="Am8-4S-gge"/>
                     <constraint firstItem="AXE-p3-ivS" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Pse-nj-E0w"/>
                     <constraint firstAttribute="trailingMargin" secondItem="AXE-p3-ivS" secondAttribute="trailing" constant="10" id="TVn-dq-dDQ"/>
                     <constraint firstItem="ufg-7e-ZMR" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="TgT-7r-6ry"/>
                     <constraint firstItem="Jhy-bJ-jZB" firstAttribute="leading" secondItem="ufg-7e-ZMR" secondAttribute="trailing" constant="10" id="VjG-Lx-AmA"/>
                     <constraint firstItem="Vtx-bk-XTc" firstAttribute="leading" secondItem="ufg-7e-ZMR" secondAttribute="trailing" constant="10" id="W5E-CT-mCJ"/>
                     <constraint firstItem="Vtx-bk-XTc" firstAttribute="top" secondItem="ufg-7e-ZMR" secondAttribute="top" id="adc-OW-9nr"/>
+                    <constraint firstAttribute="bottom" secondItem="4i1-7G-JdH" secondAttribute="bottom" id="ewR-GP-VlP"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="fansCountLabel" destination="Jhy-bJ-jZB" id="DJv-rH-th3"/>
+                <outlet property="headerImageView" destination="ufg-7e-ZMR" id="doJ-xU-TcU"/>
+                <outlet property="screamNameLabel" destination="Vtx-bk-XTc" id="cl9-Ai-9FO"/>
+            </connections>
             <point key="canvasLocation" x="25" y="69.5"/>
         </tableViewCell>
     </objects>

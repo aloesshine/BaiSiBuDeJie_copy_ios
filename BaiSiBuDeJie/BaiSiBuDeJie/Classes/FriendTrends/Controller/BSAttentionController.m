@@ -13,6 +13,7 @@
 #import "BSAttentionCategory.h"
 #import "BSAttentionUserCell.h"
 #import "BSAttentionUser.h"
+#import "UIImageView+WebCache.h"
 
 #define BSCategoryCellIdentifier @"categoryCell"
 #define BSUserCellIdentifier @"userCell"
@@ -33,6 +34,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    // 设置导航栏标题
+    self.navigationItem.title = @"推荐关注";
+    
+    // 设置view的背景颜色
+    self.view.backgroundColor = BSGlobleBackgroundColor;
+    
     // 初始化表格各种数据
     [self setUpTableView];
     
@@ -51,11 +58,11 @@
     
     [self.userTableView registerNib:[UINib nibWithNibName:NSStringFromClass([BSAttentionUserCell class]) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:BSUserCellIdentifier];
     
-    // 设置导航栏标题
-    self.navigationItem.title = @"推荐关注";
+    // 设置两个表格的上边距
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.categoryTableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
+    self.userTableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
     
-    // 设置view的背景颜色
-    self.view.backgroundColor = BSGlobleBackgroundColor;
 }
 
 - (void)sendGetRequest
@@ -75,6 +82,7 @@
         
         // 设置初始选中 0 位置
         [self.categoryTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:YES scrollPosition:UITableViewScrollPositionTop];
+        [self tableView:self.categoryTableView didSelectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@",error);
@@ -115,7 +123,7 @@
     }
     else
     {
-        return 10;
+        return self.attentionUsers.count;
     }
 }
 
@@ -135,18 +143,26 @@
     {
         BSAttentionUserCell *cell = [tableView dequeueReusableCellWithIdentifier:BSUserCellIdentifier];
         
+        BSAttentionUser *attUser = self.attentionUsers[indexPath.row];
+        
+        [cell.headerImageView sd_setImageWithURL:[NSURL URLWithString:attUser.header]];
+        cell.screamNameLabel.text = attUser.screen_name;
+        cell.fansCountLabel.text = [NSString stringWithFormat:@"%zd人关注",attUser.fans_count];
+        
         return cell;
     }
 }
 
+// 选中左边分类
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (tableView == self.categoryTableView)
     {
         BSAttentionCategory *attCat = _attentionCategory[indexPath.row];
         NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-        parameters[@"a"] = @"category";
-        parameters[@"c"] = @"list";
+        parameters[@"a"] = @"list";
+        parameters[@"c"] = @"subscribe";
+        // integer 转化
         parameters[@"category_id"] = [NSNumber numberWithInteger:attCat.ID];
         [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
             
@@ -156,8 +172,6 @@
             self.attentionUsers = responseObject[@"list"];
             
             [self.userTableView reloadData];
-            
-            [SVProgressHUD dismiss];
 
             
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -168,13 +182,25 @@
     }
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (tableView == self.categoryTableView)
+    {
+        return 45;
+    }
+    else
+    {
+        return 70;
+    }
+}
+
 - (void)setAttentionUsers:(NSArray *)attentionUsers
 {
     NSMutableArray *attUsers = [NSMutableArray array];
     
     for (NSDictionary *dict in attentionUsers)
     {
-        BSAttentionUser *att = [BSAttentionUser ]
+        BSAttentionUser *att = [BSAttentionUser attentionUserWithDict:dict];
         
         [attUsers addObject:att];
     }

@@ -12,7 +12,7 @@
 
 @property (nonatomic, copy) NSString *header;
 @property (nonatomic, copy) NSString *screen_name;
-@property (nonatomic, assign) NSInteger *fans_count;
+@property (nonatomic, assign) NSInteger fans_count;
 
 + (instancetype)attentionUserWithDict:(NSDictionary *)dict;
 - (instancetype)initWithDict:(NSDictionary *)dict;

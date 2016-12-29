@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface BSAttentionUserCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *headerImageView;
+@property (weak, nonatomic) IBOutlet UILabel *screamNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *fansCountLabel;
 
 @end
